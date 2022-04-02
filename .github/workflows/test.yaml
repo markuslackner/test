@@ -1,5 +1,8 @@
 on:
   workflow_dispatch:
+  push: 
+    branches:
+      - main
   
 jobs:
   test:
@@ -11,4 +14,4 @@ jobs:
           super_secreter: ${{ secrets.SuperSecreter }}
         run: |
           echo "Super secret ist \"$(echo ${super_secret} | sed 's/./& /g')\""
-          echo "Super secret 2 ist \"$(echo ${super_secreter} | sed 's/./& /g')\""
+          echo "Super secreter ist \"$(echo ${super_secreter} | sed 's/./& /g')\""
