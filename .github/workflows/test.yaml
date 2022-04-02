@@ -6,7 +6,8 @@ on:
   
 jobs:
   test:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
+    environment: protected_build
     steps:
       - name: Hello world action        
         env:
